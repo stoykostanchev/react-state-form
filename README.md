@@ -6,6 +6,7 @@ This code follows a [post](https://medium.com/anyjunk/our-react-redux-structure-
 
 ### Prerequisites
 
+The code is written and tested for node **v11.0.0**
 Clone this repository and go to it's root
 
 ### Installing
@@ -29,3 +30,11 @@ Comments on the particular text of the post will be put in comments initially, a
 
 Initial version scaffold taken from the [tutorials](https://reactjs.org/docs/create-a-new-react-app.html) by running
 ```npx create-react-app react-state-form```
+
+## Notes
+
+TS and Flow fight each other. Had to disable [TS / JS lang features](https://stackoverflow.com/questions/48859169/js-types-can-only-be-used-in-a-ts-file-visual-studio-code-using-ts-check)
+
+Installed [flow](https://create-react-app.dev/docs/adding-flow/)
+
+Downgraded from Node **v13.0.0** after the build stopped working due to an eslint regex inside node_modules containing invalid flags 
