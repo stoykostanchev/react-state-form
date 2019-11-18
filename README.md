@@ -24,3 +24,8 @@ npm start
 
 The base code can be found in the ```/src``` folder.
 Comments on the particular text of the post will be put in comments initially, and later on summarized in a dedicated readme
+
+## Tech used
+
+Initial version scaffold taken from the [tutorials](https://reactjs.org/docs/create-a-new-react-app.html) by running
+```npx create-react-app react-state-form```
