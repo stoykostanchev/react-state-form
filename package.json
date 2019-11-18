@@ -1,0 +1,11 @@
+{
+  "name": "react-state-form",
+  "version": "1.0.0",
+  "description": "A walkthrough of a potential React architecture for state and form data separation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Stoyko Stanchev",
+  "license": "MIT"
+}
