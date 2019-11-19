@@ -125,3 +125,17 @@ ResType => StateType
 If we are going through the trouble of using flow here, we could look to also use it to make the property names type safe? Typescript has 'keyof', and some [libraries can add type safety](https://www.npmjs.com/package/ts-object-path). Would hope Flow has something like that as well?
 
 Random bit of extra info - validation is also mentioned, though it has more of a philosophical place in terms of this blog post
+
+
+## Snippet 2
+
+This one shows the lenses. Imports have been omitted for clarity, but if it's just the previous snippet, then that makes the snipper more concrete and easy to understand.
+
+Probably worth adding a file with the state type to draw the full picture.
+
+Not sure where this code belongs, I did see it's mentioned later on. Though I would've loved to know NOW, as this is where I'm at whilst following the post...
+
+Not quite sure what the difference is between the ```State``` and the ```StateObject``` types at the moment. It sounds like there will be multiple state objects around the place...
+
+Overall, I am seeing a getter, not a ```lense```. A lense can PUT things, and it obeys laws, at least the way I understand them
+
