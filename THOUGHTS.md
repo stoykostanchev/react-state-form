@@ -93,3 +93,35 @@ and our lense would probably be
 ``` const lensNow = (st) => marsh(lens(st))```
 
 With this we arrive at the first code snippet
+
+## Snippet 1
+
+The thing about this snippet is - I don't know what it's called. Had to read everything through to the end, to make an assumption that would be a `model.js` inside of a `person` folder
+
+What's more - the file itself is not entirely valid code, though the intention is clear [Cannot resolve name `StateObject`].
+
+Kind of wondering why
+~~~
+type Marshaller<T, U> = {
+  unmarshal: StateObject => T,
+  marshal: T => U,
+};
+Marshaller<Person, PersonResource>
+~~~
+instead of
+~~~
+type Marshaller<StateType, FormType, ResType> = {
+  unmarshal: StateType => FormType,
+  marshal: FormType => ResType,
+};
+Marshaller<State, Person, PersonResource>
+~~~
+and wondnering if the reducer(?) belongs there as well,
+as a function that is (I guess?)
+~~~
+ResType => StateType
+~~~
+
+If we are going through the trouble of using flow here, we could look to also use it to make the property names type safe? Typescript has 'keyof', and some [libraries can add type safety](https://www.npmjs.com/package/ts-object-path). Would hope Flow has something like that as well?
+
+Random bit of extra info - validation is also mentioned, though it has more of a philosophical place in terms of this blog post
