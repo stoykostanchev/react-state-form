@@ -8,10 +8,10 @@ import type { State, Dispatch, Action } from '../redux.types'
 // A function that takes a schema and an object and returns an empty object on success
 // or an object containing validation messages as per the redux-form documentation.
 // validate(shchema)(object)
-import { validate } from '../validation'
+// import { validate } from '../validation'
 
 import type { Person } from './model'
-import { schema } from './model'
+// import { schema } from './model'
 import { lens, getPerson, savePerson } from './state'
 
 type OwnProps = {
@@ -60,7 +60,7 @@ const mapDispatchToProps = (dispatch: Dispatch, ownProps: OwnProps): DispatchPro
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'PersonForm',
   getFormState: state => state.get('form'), // Tells the form how to access the immutable state.
-  validate: validate(schema),
+  // validate: validate(schema),
   enableReinitialize: true, // This updates the form when the initial values change.
   destroyOnUnmount: true, // Remove values from the state when unmounting the component.
 })(PersonForm))

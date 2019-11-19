@@ -1,4 +1,5 @@
 // @flow
+export type StateObject = any
 type Marshaller<T, U> = {
   unmarshal: StateObject => T,
   marshal: T => U,
