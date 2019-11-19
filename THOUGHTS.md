@@ -139,3 +139,6 @@ Not quite sure what the difference is between the ```State``` and the ```StateOb
 
 Overall, I am seeing a getter, not a ```lense```. A lense can PUT things, and it obeys laws, at least the way I understand them
 
+## Snippet 3
+
+An example form is given. Imports on this one have been left intact. Would've really loved to see working code I can play with.
