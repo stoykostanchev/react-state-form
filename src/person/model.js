@@ -1,5 +1,5 @@
 // @flow
-export type StateObject = any
+type StateObject = any
 type Marshaller<T, U> = {
   unmarshal: StateObject => T,
   marshal: T => U,
@@ -20,16 +20,22 @@ export type PersonResource = {
 };
 
 export const marshaller: Marshaller<Person, PersonResource> = {
-  unmarshal: stateObject => ({
-    name: stateObject.get('name') || '',
-    phone: stateObject.getIn(['contactDetails', 'phone']),
-    email: stateObject.getIn(['contactDetails', 'email']),
-  }),
-  marshal: person => ({
+  unmarshal: stateObject => {
+    if(!stateObject){ return {} }
+    return {
+      name: stateObject.get('name') || '',
+      phone: stateObject.getIn(['contactDetails', 'phone']),
+      email: stateObject.getIn(['contactDetails', 'email']),
+    }
+  },
+  marshal: person => {
+    debugger
+    return {
     name: person.name,
     contactDetails: {
       phone: person.phone,
       email: person.email,
     },
-  }),
+  }
+  },
 }

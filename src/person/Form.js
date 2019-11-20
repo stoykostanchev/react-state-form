@@ -14,11 +14,7 @@ import type { Person } from './model'
 // import { schema } from './model'
 import { lens, getPerson, savePerson } from './state'
 
-type OwnProps = {
-  routeParams: {
-    id: string,
-  },
-};
+type OwnProps = {};
 
 type StateProps = {
   initialValues: Person,
@@ -33,8 +29,8 @@ type Props = OwnProps & StateProps & DispatchProps & FormProps;
 
 class PersonForm extends Component<Props> {
   componentDidMount() {
-    const { load, routeParams } = this.props
-    load(routeParams.id)
+    const { load } = this.props
+    load("123")
   }
   
   render() {
@@ -49,7 +45,7 @@ class PersonForm extends Component<Props> {
 }
 
 const mapStateToProps = (state: State, ownProps: OwnProps): StateProps => ({
-  initialValues: lens(ownProps.routeParams.id)(state),
+  initialValues: lens("123")(state),
 })
 
 const mapDispatchToProps = (dispatch: Dispatch, ownProps: OwnProps): DispatchProps => ({

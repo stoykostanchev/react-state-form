@@ -1,20 +1,21 @@
 // @flow
-import type { State } from '../redux.types'
-import type { Person, StateObject } from './model'
+import type { Action, State } from '../redux.types'
+import type { Person } from './model'
 import { marshaller } from './model'
+import {
+  LOAD_USER
+} from '../constants/ActionTypes'
 
 type Lens<T> = string => State => T;
 
-const getter: Lens<StateObject> = id => state => 
+const getter: Lens<State> = id => state => 
   state.getIn(['entities', 'persons', id])
 
 export const lens: Lens<Person> = id => state => 
   marshaller.unmarshal(getter(id)(state))
 
-const person: Person = {
-  email: 'borat@google.com',
-  name: "Borat",
-  phone: "Sagdiyev"
-}
-export const getPerson: Number => StateObject => Person = id => state => person
+export const getPerson: string => Action = id => ({
+  type: LOAD_USER,
+  data: id,
+})
 export const savePerson: Person => void = pers => undefined

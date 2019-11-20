@@ -142,3 +142,11 @@ Overall, I am seeing a getter, not a ```lense```. A lense can PUT things, and it
 ## Snippet 3
 
 An example form is given. Imports on this one have been left intact. Would've really loved to see working code I can play with.
+
+
+## NOTES
+
+Ater trying to run the code, I've realised ```immutable.js``` is also required (e.g. `state.getIn` comes from it)
+
+
+I potentially need redux-immutablejs instead of just immutable.js
