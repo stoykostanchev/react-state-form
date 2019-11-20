@@ -1,3 +1,7 @@
+# DEMO
+
+(Go here to see the project running)[https://stoykostanchev.github.io/react-state-form/build]
+
 # State and Form data separation - independent interpretation
 
 This code follows a [post](https://medium.com/anyjunk/our-react-redux-structure-17bb3ed41488) by [Dan Hood](https://medium.com/@danahood) on separating the state of an app from any potential form data that is to be extracted from the state
