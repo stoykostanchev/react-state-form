@@ -1,11 +1,7 @@
 // @flow
-import type { Action, State } from '../redux.types'
+import type { Action, Dispatch, State } from '../redux.types'
 import type { Person } from './model'
 import { marshaller } from './model'
-import {
-  LOAD_USER,
-  SAVE_USER
-} from '../constants/ActionTypes'
 
 type Lens<T> = string => State => T;
 
@@ -16,12 +12,15 @@ export const lens: Lens<Person> = id => state =>
   marshaller.unmarshal(getter(id)(state))
 
 export const getPerson: string => Action = id => ({
-  type: LOAD_USER,
-  data: id,
+  type: "LOAD_USER",
+  id,
 })
-export const savePerson: Person => Action = person => {
-  return {
-    type: SAVE_USER,
-    data: person,
-  }
+
+export const savePerson: Person => (d: Dispatch) => void = person => dispatch => {
+  Promise.resolve().then(() => {
+    dispatch({
+      type: "SAVE_USER",
+      data: marshaller.marshal({ ...person, name: person.name + ' SAVED' }),
+    })
+  })
 }

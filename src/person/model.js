@@ -28,14 +28,11 @@ export const marshaller: Marshaller<Person, PersonResource> = {
       email: stateObject.getIn(['contactDetails', 'email']),
     }
   },
-  marshal: person => {
-    debugger
-    return {
+  marshal: person => ({
     name: person.name,
     contactDetails: {
       phone: person.phone,
       email: person.email,
     },
-  }
-  },
+  }),
 }
