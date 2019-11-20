@@ -35,11 +35,11 @@ class PersonForm extends Component<Props> {
   
   render() {
     const { handleSubmit } = this.props
-    return <form onSubmit={handleSubmit}>
-      <Field name='name' component='input' />
-      <Field name='phone' component='input' />
-      <Field name='email' component='input' />
-      <button>Submit</button>
+    return <form onSubmit={handleSubmit} className="personForm">
+      <Field className="personForm-input" name='name' component='input' />
+      <Field className="personForm-input" name='phone' component='input' />
+      <Field className="personForm-input" name='email' component='input' />
+      <button className="personForm-button">Submit</button>
     </form>
   }
 }

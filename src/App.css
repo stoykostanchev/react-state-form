@@ -6,17 +6,32 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.personForm {
+  align-items: stretch;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
 }
 
-.App-link {
-  color: #09d3ac;
+.personForm-input {
+  border: solid 1px lightgray;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.personForm-button {
+  background-color: #194D33;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
 }
