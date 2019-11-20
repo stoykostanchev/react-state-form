@@ -1,6 +1,6 @@
 # DEMO
 
-[Go here to see the project running](https://stoykostanchev.github.io/react-state-form/build)
+[Go here to see the project running](https://stoykostanchev.github.io/react-state-form)
 
 # State and Form data separation - independent interpretation
 
