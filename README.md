@@ -1,6 +1,6 @@
 # DEMO
 
-(Go here to see the project running)[https://stoykostanchev.github.io/react-state-form/build]
+[Go here to see the project running](https://stoykostanchev.github.io/react-state-form/build)
 
 # State and Form data separation - independent interpretation
 
@@ -43,4 +43,8 @@ TS and Flow fight each other. Had to disable [TS / JS lang features](https://sta
 
 Installed [flow](https://create-react-app.dev/docs/adding-flow/)
 
-Downgraded from Node **v13.0.0** after the build stopped working due to an eslint regex inside node_modules containing invalid flags 
+Downgraded from Node **v13.0.0** after the build stopped working due to an eslint regex inside node_modules containing invalid flags
+
+## TODO
+
+See a small [chunk of things](https://github.com/stoykostanchev/react-state-form/blob/master/TODO.md) that would be on the roadmap
