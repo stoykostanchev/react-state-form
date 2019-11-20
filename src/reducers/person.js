@@ -2,7 +2,8 @@
 import type { Action, State } from './../redux.types'
 import { fromJS } from "immutable"
 import {
-  LOAD_USER
+  LOAD_USER,
+  SAVE_USER
 } from '../constants/ActionTypes'
 
 const initialState: State = fromJS({
@@ -22,6 +23,12 @@ const person = (state: State = initialState, action: Action) => {
               "email": "goran.bregovic@google.com",
             }
           }
+        }
+      });
+    case SAVE_USER:
+      return fromJS({
+        "persons": {
+          "123" : action.data
         }
       })
     default:

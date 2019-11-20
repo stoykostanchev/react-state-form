@@ -3,7 +3,8 @@ import type { Action, State } from '../redux.types'
 import type { Person } from './model'
 import { marshaller } from './model'
 import {
-  LOAD_USER
+  LOAD_USER,
+  SAVE_USER
 } from '../constants/ActionTypes'
 
 type Lens<T> = string => State => T;
@@ -18,4 +19,9 @@ export const getPerson: string => Action = id => ({
   type: LOAD_USER,
   data: id,
 })
-export const savePerson: Person => void = pers => undefined
+export const savePerson: Person => Action = person => {
+  return {
+    type: SAVE_USER,
+    data: person,
+  }
+}

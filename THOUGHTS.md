@@ -150,3 +150,5 @@ Ater trying to run the code, I've realised ```immutable.js``` is also required (
 
 
 I potentially need redux-immutablejs instead of just immutable.js
+
+I also need an extra reducer to have the fields be reactive `https://codesandbox.io/s/mZRjw05yp`
